@@ -1,16 +1,24 @@
-import logo from "@/assets/daoud-creative-logo-blanc.png.asset.json";
-import logoSlogan from "@/assets/daoud-creative-logo-blanc-slogan.png.asset.json";
 import { cn } from "@/lib/utils";
 
-/** The official white Daoud Creative logo. Only place it on dark surfaces. */
+/**
+ * Daoud Creative wordmark (white). Rendered as text so it never depends on an
+ * external image host. Only place it on dark surfaces.
+ */
 export function Logo({ className, tagline = false }: { className?: string; tagline?: boolean }) {
   return (
-    <img
-      src={tagline ? logoSlogan.url : logo.url}
-      alt="Daoud Creative"
-      width={828}
-      height={tagline ? 184 : 140}
-      className={cn("h-8 w-auto", className)}
-    />
+    <span
+      role="img"
+      aria-label="Daoud Creative"
+      className={cn("inline-flex flex-col leading-none text-white", className)}
+    >
+      <span className="font-display text-xl font-bold tracking-tight">
+        Daoud<span className="font-semibold"> Creative</span>
+      </span>
+      {tagline && (
+        <span className="mt-1 text-[0.6rem] font-medium uppercase tracking-[0.2em] text-white/70">
+          Studio créatif &amp; digital
+        </span>
+      )}
+    </span>
   );
 }
