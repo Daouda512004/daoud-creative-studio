@@ -65,31 +65,31 @@
 
 :root {
   --radius: 1rem;
-  --background: oklch(0.99 0.003 85);
-  --foreground: oklch(0.16 0.008 265);
-  --surface: oklch(0.975 0.006 85);
-  --surface-2: oklch(0.95 0.01 85);
+  --background: oklch(0.975 0.008 82);
+  --foreground: oklch(0.17 0.008 265);
+  --surface: oklch(0.99 0.004 82);
+  --surface-2: oklch(0.95 0.009 82);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.16 0.008 265);
+  --card-foreground: oklch(0.17 0.008 265);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.16 0.008 265);
+  --popover-foreground: oklch(0.17 0.008 265);
   --primary: oklch(0.84 0.17 88);
   --primary-glow: oklch(0.9 0.15 95);
   --primary-foreground: oklch(0.13 0.006 265);
   --ink: oklch(0.12 0.006 265);
-  --brand: oklch(0.84 0.17 88);
+  --brand: oklch(0.43 0.12 72);
   --paper: oklch(0.99 0.003 85);
   --secondary: oklch(0.95 0.01 85);
-  --secondary-foreground: oklch(0.16 0.008 265);
+  --secondary-foreground: oklch(0.17 0.008 265);
   --muted: oklch(0.95 0.01 85);
-  --muted-foreground: oklch(0.46 0.012 265);
+  --muted-foreground: oklch(0.39 0.012 265);
   --accent: oklch(0.94 0.035 88);
-  --accent-foreground: oklch(0.16 0.008 265);
+  --accent-foreground: oklch(0.17 0.008 265);
   --destructive: oklch(0.58 0.22 27);
   --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.16 0.008 265 / 11%);
-  --input: oklch(0.16 0.008 265 / 16%);
-  --ring: oklch(0.76 0.16 85);
+  --border: oklch(0.16 0.008 265 / 15%);
+  --input: oklch(0.16 0.008 265 / 22%);
+  --ring: oklch(0.58 0.13 78);
   --chart-1: oklch(0.76 0.16 85);
   --chart-2: oklch(0.55 0.02 265);
   --chart-3: oklch(0.4 0.015 265);
@@ -101,17 +101,17 @@
   --sidebar-primary-foreground: oklch(0.13 0.006 265);
   --sidebar-accent: oklch(0.95 0.01 85);
   --sidebar-accent-foreground: oklch(0.16 0.008 265);
-  --sidebar-border: oklch(0.16 0.008 265 / 11%);
-  --sidebar-ring: oklch(0.76 0.16 85);
+  --sidebar-border: oklch(0.16 0.008 265 / 15%);
+  --sidebar-ring: oklch(0.58 0.13 78);
 
   --gradient-pill: linear-gradient(180deg, var(--primary-glow) 0%, var(--primary) 55%, oklch(0.8 0.17 80) 100%);
   --gradient-halo: radial-gradient(ellipse at center, color-mix(in oklab, var(--primary) 25%, transparent) 0%, transparent 65%);
-  --gradient-fade: linear-gradient(180deg, transparent 0%, var(--background) 100%);
+  --gradient-fade: linear-gradient(180deg, transparent 0%, oklch(0.12 0.006 265 / 0.94) 100%);
   --gradient-card: linear-gradient(160deg, color-mix(in oklab, white 96%, var(--primary) 4%) 0%, white 100%);
   --shadow-glow: 0 0 0 1px color-mix(in oklab, var(--primary) 60%, transparent), 0 10px 40px -12px color-mix(in oklab, var(--primary) 55%, transparent);
   --shadow-soft: 0 18px 45px -28px oklch(0.2 0.02 265 / 0.28);
-  --gradient-photo: linear-gradient(100deg, oklch(0.13 0.006 265 / 0.94) 0%, oklch(0.13 0.006 265 / 0.78) 45%, oklch(0.13 0.006 265 / 0.35) 100%);
-  --gradient-photo-center: linear-gradient(180deg, oklch(0.13 0.006 265 / 0.78) 0%, oklch(0.13 0.006 265 / 0.88) 100%);
+  --gradient-photo: linear-gradient(100deg, oklch(0.13 0.006 265 / 0.94) 0%, oklch(0.13 0.006 265 / 0.84) 48%, oklch(0.13 0.006 265 / 0.5) 100%);
+  --gradient-photo-center: linear-gradient(180deg, oklch(0.13 0.006 265 / 0.82) 0%, oklch(0.13 0.006 265 / 0.9) 100%);
 }
 
 /* Optional warm-paper section theme. */
@@ -127,12 +127,12 @@
   --secondary: oklch(0.93 0.01 85);
   --secondary-foreground: oklch(0.19 0.01 265);
   --muted: oklch(0.94 0.01 85);
-  --muted-foreground: oklch(0.44 0.012 265);
+  --muted-foreground: oklch(0.4 0.012 265);
   --accent: oklch(0.93 0.012 85);
   --accent-foreground: oklch(0.19 0.01 265);
-  --border: oklch(0.19 0.01 265 / 11%);
-  --input: oklch(0.19 0.01 265 / 18%);
-  --brand: oklch(0.55 0.12 72);
+  --border: oklch(0.19 0.01 265 / 15%);
+  --input: oklch(0.19 0.01 265 / 22%);
+  --brand: oklch(0.43 0.12 72);
   --shadow-soft: 0 24px 50px -30px oklch(0.25 0.03 265 / 0.3);
   color: var(--foreground);
 }
@@ -219,6 +219,52 @@
 
 @utility shadow-soft {
   box-shadow: var(--shadow-soft);
+}
+
+/* Restrained depth and lift: a tactile 3D feel without compromising readability. */
+@layer components {
+  main > section:first-child > .grid {
+    perspective: 1400px;
+  }
+
+  main > section:first-child > .grid > div {
+    transform-style: preserve-3d;
+    transition: transform 450ms cubic-bezier(0.2, 0.75, 0.25, 1), box-shadow 450ms ease;
+    box-shadow: 0 18px 42px -26px oklch(0.12 0.02 265 / 0.32);
+  }
+
+  main > section:first-child > .grid > div:hover {
+    transform: translateY(-5px) rotateX(1deg) rotateY(-1deg);
+    box-shadow: 0 28px 55px -28px oklch(0.12 0.02 265 / 0.42);
+  }
+
+  .glass {
+    transition: transform 300ms ease, box-shadow 300ms ease, border-color 300ms ease;
+  }
+
+  .glass:hover {
+    box-shadow: 0 22px 45px -25px oklch(0.12 0.02 265 / 0.28);
+  }
+
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    outline: 3px solid color-mix(in oklab, var(--brand) 70%, transparent);
+    outline-offset: 3px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 @keyframes float {
