@@ -28,3 +28,8 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+- Site content (services, projects, contact details, nav) lives in `src/lib/site-data.ts`; pages read from it so copy changes happen in one place.
+- Shared site chrome (Header/Footer) is rendered in `src/routes/__root.tsx`; brand pieces (Logo, Highlight pill, CtaBand) live in `src/components/site/`.
+- The contact form has no backend: it opens WhatsApp or the mail client with a prefilled message, so no data is stored.
