@@ -43,6 +43,7 @@
   --color-surface-2: var(--surface-2);
   --color-ink: var(--ink);
   --color-paper: var(--paper);
+  --color-brand: var(--brand);
   --color-chart-1: var(--chart-1);
   --color-chart-2: var(--chart-2);
   --color-chart-3: var(--chart-3);
@@ -76,6 +77,7 @@
   --primary-glow: oklch(0.9 0.15 95);
   --primary-foreground: oklch(0.17 0.01 265);
   --ink: oklch(0.14 0.006 265);
+  --brand: oklch(0.86 0.17 88);
   --paper: oklch(0.985 0.004 90);
   --secondary: oklch(0.23 0.007 265);
   --secondary-foreground: oklch(0.97 0.004 90);
@@ -108,6 +110,31 @@
   --gradient-card: linear-gradient(160deg, color-mix(in oklab, var(--foreground) 6%, transparent) 0%, color-mix(in oklab, var(--foreground) 1.5%, transparent) 100%);
   --shadow-glow: 0 0 0 1px color-mix(in oklab, var(--primary) 60%, transparent), 0 10px 50px -8px color-mix(in oklab, var(--primary) 65%, transparent);
   --shadow-soft: 0 20px 60px -20px oklch(0 0 0 / 0.7);
+  --gradient-photo: linear-gradient(100deg, oklch(0.13 0.006 265 / 0.94) 0%, oklch(0.13 0.006 265 / 0.78) 45%, oklch(0.13 0.006 265 / 0.35) 100%);
+  --gradient-photo-center: linear-gradient(180deg, oklch(0.13 0.006 265 / 0.78) 0%, oklch(0.13 0.006 265 / 0.88) 100%);
+}
+
+/* Light sections: same tokens, warm paper values. Add `theme-light bg-background` to a section. */
+.theme-light {
+  --background: oklch(0.975 0.007 85);
+  --foreground: oklch(0.19 0.01 265);
+  --surface: oklch(0.948 0.011 85);
+  --surface-2: oklch(0.925 0.013 85);
+  --card: oklch(0.995 0.002 85);
+  --card-foreground: oklch(0.19 0.01 265);
+  --popover: oklch(0.995 0.002 85);
+  --popover-foreground: oklch(0.19 0.01 265);
+  --secondary: oklch(0.93 0.01 85);
+  --secondary-foreground: oklch(0.19 0.01 265);
+  --muted: oklch(0.94 0.01 85);
+  --muted-foreground: oklch(0.44 0.012 265);
+  --accent: oklch(0.93 0.012 85);
+  --accent-foreground: oklch(0.19 0.01 265);
+  --border: oklch(0.19 0.01 265 / 11%);
+  --input: oklch(0.19 0.01 265 / 18%);
+  --brand: oklch(0.55 0.12 72);
+  --shadow-soft: 0 24px 50px -30px oklch(0.25 0.03 265 / 0.45);
+  color: var(--foreground);
 }
 
 @layer base {
@@ -170,6 +197,20 @@
   background: var(--gradient-pill);
   color: var(--color-primary-foreground);
   box-shadow: var(--shadow-glow), inset 0 1px 0 oklch(1 0 0 / 0.45);
+}
+
+@utility bg-photo-overlay {
+  background: var(--gradient-photo);
+}
+
+@utility bg-photo-overlay-center {
+  background: var(--gradient-photo-center);
+}
+
+@utility panel {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-soft);
 }
 
 @utility shadow-glow {

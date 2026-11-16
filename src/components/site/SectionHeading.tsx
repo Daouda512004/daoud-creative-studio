@@ -5,11 +5,11 @@ export function Eyebrow({ children, className }: { children: ReactNode; classNam
   return (
     <span
       className={cn(
-        "inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3.5 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-primary",
+        "inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.22em] text-brand",
         className,
       )}
     >
-      <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+      <span className="h-0.5 w-7 bg-primary" />
       {children}
     </span>
   );
@@ -31,14 +31,13 @@ export function SectionHeading({
   return (
     <div
       className={cn(
-        "flex flex-col gap-4",
+        "flex max-w-2xl flex-col gap-4",
         align === "center" ? "mx-auto items-center text-center" : "items-start",
-        "max-w-2xl",
         className,
       )}
     >
       {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
-      <h2 className="text-3xl font-bold leading-[1.1] sm:text-4xl md:text-5xl">{title}</h2>
+      <h2 className="text-3xl font-bold leading-[1.1] sm:text-4xl md:text-[2.75rem]">{title}</h2>
       {text && <p className="text-base leading-relaxed text-muted-foreground md:text-lg">{text}</p>}
     </div>
   );
