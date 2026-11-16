@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 
-/** Daoud Creative wordmark, styled for the site's light surfaces. */
+/** Daoud Creative wordmark for the premium agency theme. */
 export function Logo({ className, tagline = false }: { className?: string; tagline?: boolean }) {
   return (
     <span
