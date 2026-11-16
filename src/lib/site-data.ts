@@ -9,8 +9,6 @@ import studio from "@/assets/studio-photographe.jpg";
 import mobile from "@/assets/application-mobile.jpg";
 import equipe from "@/assets/equipe-developpeurs.jpg";
 import reunion from "@/assets/reunion-client.jpg";
-import deessDesktop from "@/assets/deess-djamil-desktop.jpg.asset.json";
-import deessMobile from "@/assets/deess-djamil-mobile.jpg.asset.json";
 
 export const contact = {
   email: "daoudcreative@gmail.com",
@@ -66,7 +64,11 @@ export const services: Service[] = [
     long: "Nous concevons et développons des sites qui présentent clairement votre activité, s'affichent parfaitement sur téléphone et que vous pouvez faire évoluer sans nous.",
     icon: "globe",
     image: siteWeb,
-    points: ["Sites vitrines & institutionnels", "Sites d'associations & d'organisations", "Portfolios & pages de lancement"],
+    points: [
+      "Sites vitrines & institutionnels",
+      "Sites d'associations & d'organisations",
+      "Portfolios & pages de lancement",
+    ],
   },
   {
     slug: "applications-mobiles",
@@ -80,7 +82,8 @@ export const services: Service[] = [
   {
     slug: "plateformes-web",
     title: "Plateformes & applications web",
-    short: "Espaces membres, outils de gestion et tableaux de bord adaptés à votre façon de travailler.",
+    short:
+      "Espaces membres, outils de gestion et tableaux de bord adaptés à votre façon de travailler.",
     long: "Quand un simple site ne suffit plus, nous construisons l'outil dont votre équipe a besoin : inscriptions, gestion, suivi, automatisations et intégration de l'IA.",
     icon: "layers",
     image: equipe,
@@ -111,7 +114,11 @@ export const services: Service[] = [
     long: "Nous mettons votre projet en ligne et nous en occupons ensuite : sécurité, sauvegardes, corrections et améliorations pour qu'il reste rapide et visible sur Google.",
     icon: "server",
     image: montage,
-    points: ["Nom de domaine & hébergement", "Mises à jour & sécurité", "Référencement Google (SEO)"],
+    points: [
+      "Nom de domaine & hébergement",
+      "Mises à jour & sécurité",
+      "Référencement Google (SEO)",
+    ],
   },
 ];
 
@@ -189,11 +196,16 @@ export const featuredProject = {
   client: "Dahira des Élèves et Étudiants Sopey Seydi Djamil",
   url: "https://deess-djamil.org",
   domain: "deess-djamil.org",
-  desktop: deessDesktop.url,
-  mobile: deessMobile.url,
+  desktop: siteWeb,
+  mobile,
   summary:
     "Le site officiel du dahira : sa présentation, son guide spirituel, ses commissions, ses activités et un parcours pour rejoindre la communauté.",
-  scope: ["Design de l'interface", "Développement du site", "Affichage parfait sur téléphone", "Mise en ligne"],
+  scope: [
+    "Design de l'interface",
+    "Développement du site",
+    "Affichage parfait sur téléphone",
+    "Mise en ligne",
+  ],
 };
 
 export const projects: Project[] = [
@@ -216,14 +228,33 @@ export const projects: Project[] = [
 
 export const values = [
   { title: "Écoute", text: "Nous prenons le temps de comprendre vos besoins et vos objectifs." },
-  { title: "Solutions adaptées", text: "Chaque projet reçoit une réponse sur mesure, pensée pour vous." },
+  {
+    title: "Solutions adaptées",
+    text: "Chaque projet reçoit une réponse sur mesure, pensée pour vous.",
+  },
   { title: "Souci du détail", text: "Chaque écran, chaque pixel, chaque ligne de code compte." },
   { title: "Satisfaction", text: "Votre réussite est notre meilleure carte de visite." },
 ];
 
 export const steps = [
-  { n: "01", title: "Écouter", text: "On échange sur votre projet, vos objectifs et vos utilisateurs." },
-  { n: "02", title: "Maquetter", text: "On dessine les écrans et le parcours avant de développer." },
-  { n: "03", title: "Développer", text: "On construit, on teste sur ordinateur et sur téléphone, on vous montre." },
-  { n: "04", title: "Lancer & suivre", text: "On met en ligne, on ajuste et on vous accompagne après." },
+  {
+    n: "01",
+    title: "Écouter",
+    text: "On échange sur votre projet, vos objectifs et vos utilisateurs.",
+  },
+  {
+    n: "02",
+    title: "Maquetter",
+    text: "On dessine les écrans et le parcours avant de développer.",
+  },
+  {
+    n: "03",
+    title: "Développer",
+    text: "On construit, on teste sur ordinateur et sur téléphone, on vous montre.",
+  },
+  {
+    n: "04",
+    title: "Lancer & suivre",
+    text: "On met en ligne, on ajuste et on vous accompagne après.",
+  },
 ];

@@ -16,7 +16,8 @@ export const Route = createFileRoute("/contact")({
       { title: "Contact — Daoud Creative | Démarrons votre projet" },
       {
         name: "description",
-        content: "Contactez Daoud Creative à Dakar : daoudcreative@gmail.com, 78 663 03 92 ou sur WhatsApp. Devis rapide pour vos projets.",
+        content:
+          "Contactez Daoud Creative à Dakar : daoudcreative@gmail.com, 78 663 03 92 ou sur WhatsApp. Devis rapide pour vos projets.",
       },
       { property: "og:title", content: "Contactez Daoud Creative" },
       {
@@ -122,18 +123,31 @@ function ContactPage() {
         </div>
 
         <form onSubmit={onWhatsapp} className="glass rounded-[2rem] p-6 md:p-10 lg:col-span-3">
-          <h2 className="font-display text-2xl font-bold md:text-3xl">Parlez-nous de votre projet</h2>
+          <h2 className="font-display text-2xl font-bold md:text-3xl">
+            Parlez-nous de votre projet
+          </h2>
           <p className="mt-2 text-sm text-muted-foreground">
             Votre message s'ouvre directement dans WhatsApp ou dans votre messagerie.
           </p>
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
             <label className="flex flex-col gap-2 text-sm font-medium">
               Nom complet
-              <input required value={form.name} onChange={set("name")} className={fieldClass} placeholder="Votre nom" />
+              <input
+                required
+                value={form.name}
+                onChange={set("name")}
+                className={fieldClass}
+                placeholder="Votre nom"
+              />
             </label>
             <label className="flex flex-col gap-2 text-sm font-medium">
               Email ou téléphone
-              <input value={form.reach} onChange={set("reach")} className={fieldClass} placeholder="Pour vous recontacter" />
+              <input
+                value={form.reach}
+                onChange={set("reach")}
+                className={fieldClass}
+                placeholder="Pour vous recontacter"
+              />
             </label>
             <label className="flex flex-col gap-2 text-sm font-medium sm:col-span-2">
               Service souhaité

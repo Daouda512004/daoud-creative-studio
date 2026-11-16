@@ -21,7 +21,8 @@ export const Route = createFileRoute("/services")({
       { property: "og:title", content: "Les services de Daoud Creative" },
       {
         property: "og:description",
-        content: "Design graphique, développement web, photo, vidéo et communication digitale à Dakar.",
+        content:
+          "Design graphique, développement web, photo, vidéo et communication digitale à Dakar.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

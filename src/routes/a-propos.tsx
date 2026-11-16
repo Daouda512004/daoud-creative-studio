@@ -23,7 +23,8 @@ export const Route = createFileRoute("/a-propos")({
       { property: "og:title", content: "À propos de Daoud Creative" },
       {
         property: "og:description",
-        content: "Notre mission : transformer les idées en créations visuelles et en solutions numériques modernes.",
+        content:
+          "Notre mission : transformer les idées en créations visuelles et en solutions numériques modernes.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -68,9 +69,22 @@ function AboutPage() {
 
       <section className="mx-auto grid max-w-7xl items-center gap-12 px-5 md:px-8 lg:grid-cols-2">
         <div className="grid grid-cols-2 gap-4">
-          <img src={studio} alt="Séance photo en studio" width={1280} height={1600} className="aspect-[3/4] w-full rounded-3xl object-cover" />
+          <img
+            src={studio}
+            alt="Séance photo en studio"
+            width={1280}
+            height={1600}
+            className="aspect-[3/4] w-full rounded-3xl object-cover"
+          />
           <div className="flex flex-col gap-4 pt-12">
-            <img src={video} alt="Tournage vidéo au coucher du soleil" width={1280} height={960} loading="lazy" className="aspect-square w-full rounded-3xl object-cover" />
+            <img
+              src={video}
+              alt="Tournage vidéo au coucher du soleil"
+              width={1280}
+              height={960}
+              loading="lazy"
+              className="aspect-square w-full rounded-3xl object-cover"
+            />
             <div className="glass grid flex-1 place-items-center rounded-3xl p-5">
               <Logo tagline className="text-xl" />
             </div>
@@ -100,7 +114,9 @@ function AboutPage() {
         <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {values.map((v, i) => (
             <div key={v.title} className="glass rounded-3xl p-6">
-              <span className="font-display text-5xl font-bold text-primary/25">{String(i + 1).padStart(2, "0")}</span>
+              <span className="font-display text-5xl font-bold text-primary/25">
+                {String(i + 1).padStart(2, "0")}
+              </span>
               <h3 className="mt-6 font-display text-xl font-semibold">{v.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{v.text}</p>
             </div>
