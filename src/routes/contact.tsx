@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Highlight } from "@/components/site/Highlight";
 import { PageHero } from "@/components/site/PageHero";
 import { Socials } from "@/components/site/Socials";
+import bureauNuit from "@/assets/bureau-nuit.jpg";
 import { contact, services } from "@/lib/site-data";
 
 export const Route = createFileRoute("/contact")({
@@ -69,6 +70,7 @@ function ContactPage() {
   return (
     <>
       <PageHero
+        image={bureauNuit}
         eyebrow="Contact"
         title={
           <>

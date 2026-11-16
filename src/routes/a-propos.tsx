@@ -6,6 +6,7 @@ import { Highlight } from "@/components/site/Highlight";
 import { Logo } from "@/components/site/Logo";
 import { PageHero } from "@/components/site/PageHero";
 import { SectionHeading } from "@/components/site/SectionHeading";
+import reunionHero from "@/assets/reunion-client.jpg";
 import { values } from "@/lib/site-data";
 import studio from "@/assets/studio-photographe.jpg";
 import video from "@/assets/videographie.jpg";
@@ -53,10 +54,11 @@ function AboutPage() {
   return (
     <>
       <PageHero
+        image={reunionHero}
         eyebrow="À propos"
         title={
           <>
-            Une marque <Highlight cursor={false}>créative</Highlight>
+            Une marque <Highlight>créative</Highlight>
             <br />
             et digitale.
           </>

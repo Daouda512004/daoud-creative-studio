@@ -3,6 +3,7 @@ import { useState } from "react";
 import { CtaBand } from "@/components/site/CtaBand";
 import { Highlight } from "@/components/site/Highlight";
 import { PageHero } from "@/components/site/PageHero";
+import equipeHero from "@/assets/equipe-developpeurs.jpg";
 import { projects, type ProjectCategory } from "@/lib/site-data";
 import { cn } from "@/lib/utils";
 
@@ -26,7 +27,7 @@ export const Route = createFileRoute("/realisations")({
   component: RealisationsPage,
 });
 
-const filters: ("Tout" | ProjectCategory)[] = ["Tout", "Design", "Web", "Photo", "Vidéo", "Social"];
+const filters: ("Tout" | ProjectCategory)[] = ["Tout", "Web", "Mobile", "Design", "Photo", "Vidéo"];
 
 function RealisationsPage() {
   const [active, setActive] = useState<(typeof filters)[number]>("Tout");
@@ -35,6 +36,7 @@ function RealisationsPage() {
   return (
     <>
       <PageHero
+        image={equipeHero}
         eyebrow="Réalisations"
         title={
           <>
@@ -76,7 +78,7 @@ function RealisationsPage() {
                 loading="lazy"
                 className={cn(
                   "w-full object-cover transition-transform duration-700 group-hover:scale-105",
-                  p.tall ? "aspect-[4/5]" : "aspect-[4/3]",
+                  "aspect-[4/3]",
                 )}
               />
               <div className="absolute inset-0 bg-fade opacity-90" />

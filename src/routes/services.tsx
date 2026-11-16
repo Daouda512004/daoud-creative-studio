@@ -5,6 +5,7 @@ import { CtaBand } from "@/components/site/CtaBand";
 import { Highlight } from "@/components/site/Highlight";
 import { PageHero } from "@/components/site/PageHero";
 import { ServiceIcon } from "@/components/site/ServiceIcon";
+import mobileHero from "@/assets/application-mobile.jpg";
 import { services } from "@/lib/site-data";
 import { cn } from "@/lib/utils";
 
@@ -33,12 +34,13 @@ function ServicesPage() {
   return (
     <>
       <PageHero
+        image={mobileHero}
         eyebrow="Nos services"
         title={
           <>
             Solutions digitales
             <br />
-            <Highlight className="mt-3" cursor={false}>& création visuelle</Highlight>
+            <Highlight className="mt-3">& création visuelle</Highlight>
           </>
         }
         text="Huit expertises complémentaires pour construire, valoriser et faire grandir votre image — en ligne comme hors ligne."
