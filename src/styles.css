@@ -4,7 +4,7 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* Daoud Creative design system — dark charcoal + signature yellow. */
+/* Daoud Creative design system — light warm paper, charcoal text, signature yellow. */
 
 @theme inline {
   --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
@@ -65,53 +65,56 @@
 
 :root {
   --radius: 1rem;
-  --background: oklch(0.155 0.006 265);
-  --foreground: oklch(0.97 0.004 90);
-  --surface: oklch(0.19 0.006 265);
-  --surface-2: oklch(0.23 0.007 265);
-  --card: oklch(0.19 0.006 265);
-  --card-foreground: oklch(0.97 0.004 90);
-  --popover: oklch(0.19 0.006 265);
-  --popover-foreground: oklch(0.97 0.004 90);
+  /* Light warm paper base (the user asked for a less dark site). */
+  --background: oklch(0.978 0.008 88);
+  --foreground: oklch(0.2 0.01 265);
+  --surface: oklch(0.955 0.012 88);
+  --surface-2: oklch(0.93 0.014 88);
+  --card: oklch(0.995 0.003 88);
+  --card-foreground: oklch(0.2 0.01 265);
+  --popover: oklch(0.995 0.003 88);
+  --popover-foreground: oklch(0.2 0.01 265);
   --primary: oklch(0.86 0.17 88);
   --primary-glow: oklch(0.9 0.15 95);
-  --primary-foreground: oklch(0.17 0.01 265);
-  --ink: oklch(0.14 0.006 265);
-  --brand: oklch(0.86 0.17 88);
+  --primary-foreground: oklch(0.18 0.01 265);
+  --ink: oklch(0.2 0.01 265);
+  /* Readable amber for accent text and icons on light backgrounds. */
+  --brand: oklch(0.56 0.13 70);
   --paper: oklch(0.985 0.004 90);
-  --secondary: oklch(0.23 0.007 265);
-  --secondary-foreground: oklch(0.97 0.004 90);
-  --muted: oklch(0.23 0.007 265);
-  --muted-foreground: oklch(0.7 0.01 265);
-  --accent: oklch(0.26 0.008 265);
-  --accent-foreground: oklch(0.97 0.004 90);
-  --destructive: oklch(0.65 0.22 27);
+  --secondary: oklch(0.935 0.012 88);
+  --secondary-foreground: oklch(0.2 0.01 265);
+  --muted: oklch(0.945 0.01 88);
+  --muted-foreground: oklch(0.45 0.012 265);
+  --accent: oklch(0.935 0.014 88);
+  --accent-foreground: oklch(0.2 0.01 265);
+  --destructive: oklch(0.58 0.22 27);
   --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(1 0 0 / 9%);
-  --input: oklch(1 0 0 / 12%);
-  --ring: oklch(0.86 0.17 88);
+  --border: oklch(0.2 0.01 265 / 10%);
+  --input: oklch(0.2 0.01 265 / 16%);
+  --ring: oklch(0.7 0.16 80);
   --chart-1: oklch(0.86 0.17 88);
-  --chart-2: oklch(0.7 0.01 265);
-  --chart-3: oklch(0.5 0.01 265);
-  --chart-4: oklch(0.78 0.14 75);
-  --chart-5: oklch(0.95 0.08 95);
-  --sidebar: oklch(0.19 0.006 265);
-  --sidebar-foreground: oklch(0.97 0.004 90);
+  --chart-2: oklch(0.45 0.012 265);
+  --chart-3: oklch(0.6 0.01 265);
+  --chart-4: oklch(0.7 0.14 75);
+  --chart-5: oklch(0.92 0.08 95);
+  --sidebar: oklch(0.995 0.003 88);
+  --sidebar-foreground: oklch(0.2 0.01 265);
   --sidebar-primary: oklch(0.86 0.17 88);
-  --sidebar-primary-foreground: oklch(0.17 0.01 265);
-  --sidebar-accent: oklch(0.23 0.007 265);
-  --sidebar-accent-foreground: oklch(0.97 0.004 90);
-  --sidebar-border: oklch(1 0 0 / 9%);
-  --sidebar-ring: oklch(0.86 0.17 88);
+  --sidebar-primary-foreground: oklch(0.18 0.01 265);
+  --sidebar-accent: oklch(0.935 0.012 88);
+  --sidebar-accent-foreground: oklch(0.2 0.01 265);
+  --sidebar-border: oklch(0.2 0.01 265 / 10%);
+  --sidebar-ring: oklch(0.7 0.16 80);
 
-  --gradient-pill: linear-gradient(180deg, var(--primary-glow) 0%, var(--primary) 55%, oklch(0.8 0.17 80) 100%);
-  --gradient-halo: radial-gradient(ellipse at center, color-mix(in oklab, var(--primary) 35%, transparent) 0%, transparent 65%);
-  --gradient-fade: linear-gradient(180deg, transparent 0%, var(--background) 100%);
-  --gradient-card: linear-gradient(160deg, color-mix(in oklab, var(--foreground) 6%, transparent) 0%, color-mix(in oklab, var(--foreground) 1.5%, transparent) 100%);
-  --shadow-glow: 0 0 0 1px color-mix(in oklab, var(--primary) 60%, transparent), 0 10px 50px -8px color-mix(in oklab, var(--primary) 65%, transparent);
-  --shadow-soft: 0 20px 60px -20px oklch(0 0 0 / 0.7);
-  --gradient-photo: linear-gradient(100deg, oklch(0.13 0.006 265 / 0.94) 0%, oklch(0.13 0.006 265 / 0.78) 45%, oklch(0.13 0.006 265 / 0.35) 100%);
-  --gradient-photo-center: linear-gradient(180deg, oklch(0.13 0.006 265 / 0.78) 0%, oklch(0.13 0.006 265 / 0.88) 100%);
+  --gradient-pill: linear-gradient(180deg, var(--primary-glow) 0%, var(--primary) 60%, oklch(0.82 0.17 82) 100%);
+  --gradient-halo: radial-gradient(ellipse at center, color-mix(in oklab, var(--primary) 45%, transparent) 0%, transparent 65%);
+  --gradient-fade: linear-gradient(180deg, transparent 35%, color-mix(in oklab, var(--background) 92%, transparent) 100%);
+  --gradient-card: linear-gradient(160deg, oklch(1 0 0 / 0.92) 0%, oklch(1 0 0 / 0.78) 100%);
+  --shadow-glow: 0 10px 30px -12px color-mix(in oklab, var(--primary) 80%, transparent);
+  --shadow-soft: 0 24px 50px -30px oklch(0.3 0.03 265 / 0.35);
+  --shadow-3d: 0 40px 60px -30px oklch(0.3 0.04 80 / 0.4);
+  --gradient-photo: linear-gradient(100deg, oklch(0.978 0.008 88 / 0.97) 0%, oklch(0.978 0.008 88 / 0.86) 42%, oklch(0.978 0.008 88 / 0.2) 100%);
+  --gradient-photo-center: linear-gradient(180deg, oklch(0.978 0.008 88 / 0.85) 0%, oklch(0.978 0.008 88 / 0.92) 100%);
 }
 
 /* Light sections: same tokens, warm paper values. Add `theme-light bg-background` to a section. */
@@ -189,7 +192,6 @@
 @utility glass {
   background: var(--gradient-card);
   border: 1px solid var(--color-border);
-  backdrop-filter: blur(14px);
   box-shadow: var(--shadow-soft);
 }
 
@@ -234,4 +236,91 @@
 @keyframes marquee {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
+}
+
+/* ---------- 3D motion ---------- */
+
+@utility preserve-3d {
+  transform-style: preserve-3d;
+}
+
+@utility pop-z {
+  transform: translateZ(40px);
+}
+
+/* Card that leans toward the mouse; driven by --rx / --ry from <Tilt>. */
+@utility tilt-3d {
+  transform: perspective(1000px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+  transform-style: preserve-3d;
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: transform;
+  @media (prefers-reduced-motion: reduce) {
+    transform: none;
+  }
+}
+
+/* Elements tip up in 3D as they scroll into view (browsers without support just show them). */
+@utility reveal-3d {
+  @media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: view()) {
+      animation: reveal-3d linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 70%;
+    }
+  }
+}
+
+@keyframes reveal-3d {
+  from {
+    opacity: 0;
+    transform: perspective(1000px) rotateX(22deg) translateY(60px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.cube-scene {
+  width: var(--s);
+  height: var(--s);
+  perspective: calc(var(--s) * 4);
+  filter: drop-shadow(var(--shadow-3d));
+}
+.cube {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform: rotateX(-24deg) rotateY(38deg);
+  animation: spin-3d 18s linear infinite;
+}
+.cube-reverse {
+  animation-direction: reverse;
+  animation-duration: 24s;
+}
+.cube-face {
+  position: absolute;
+  inset: 0;
+  border-radius: calc(var(--s) * 0.12);
+  background: var(--color-primary);
+  border: 1px solid color-mix(in oklab, var(--primary-foreground) 12%, transparent);
+}
+.cube-front { transform: translateZ(calc(var(--s) / 2)); }
+.cube-back { transform: rotateY(180deg) translateZ(calc(var(--s) / 2)); background: color-mix(in oklab, var(--primary) 82%, var(--primary-foreground)); }
+.cube-right { transform: rotateY(90deg) translateZ(calc(var(--s) / 2)); background: color-mix(in oklab, var(--primary) 90%, var(--primary-foreground)); }
+.cube-left { transform: rotateY(-90deg) translateZ(calc(var(--s) / 2)); background: color-mix(in oklab, var(--primary) 88%, var(--primary-foreground)); }
+.cube-top { transform: rotateX(90deg) translateZ(calc(var(--s) / 2)); background: var(--primary-glow); }
+.cube-bottom { transform: rotateX(-90deg) translateZ(calc(var(--s) / 2)); background: color-mix(in oklab, var(--primary) 75%, var(--primary-foreground)); }
+.cube-ink .cube-face { background: var(--ink); border-color: oklch(1 0 0 / 0.12); }
+.cube-ink .cube-top { background: color-mix(in oklab, var(--ink) 80%, white); }
+.cube-ink .cube-right, .cube-ink .cube-left { background: color-mix(in oklab, var(--ink) 90%, white); }
+
+@keyframes spin-3d {
+  from { transform: rotateX(-24deg) rotateY(0deg); }
+  to { transform: rotateX(-24deg) rotateY(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cube { animation: none; }
 }

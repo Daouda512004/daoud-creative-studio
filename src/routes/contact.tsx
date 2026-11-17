@@ -17,7 +17,7 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Contactez Daoud Creative à Dakar : daoudcreative@gmail.com, 78 663 03 92 ou sur WhatsApp. Devis rapide pour vos projets.",
+          "Contactez Daoud Creative à Dakar : daoudcreative@gmail.com, 77 186 29 86 ou sur WhatsApp. Devis rapide pour vos projets.",
       },
       { property: "og:title", content: "Contactez Daoud Creative" },
       {

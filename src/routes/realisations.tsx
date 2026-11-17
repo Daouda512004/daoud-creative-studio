@@ -3,6 +3,7 @@ import { useState } from "react";
 import { CtaBand } from "@/components/site/CtaBand";
 import { Highlight } from "@/components/site/Highlight";
 import { PageHero } from "@/components/site/PageHero";
+import { Tilt } from "@/components/site/Tilt";
 import equipeHero from "@/assets/equipe-developpeurs.jpg";
 import { projects, type ProjectCategory } from "@/lib/site-data";
 import { cn } from "@/lib/utils";
@@ -76,29 +77,28 @@ function RealisationsPage() {
 
         <div className="mt-12 columns-1 gap-4 sm:columns-2 lg:columns-3">
           {list.map((p) => (
-            <figure
-              key={p.title}
-              className="group relative mb-4 break-inside-avoid overflow-hidden rounded-3xl"
-            >
-              <img
-                src={p.image}
-                alt={p.title}
-                loading="lazy"
-                className={cn(
-                  "w-full object-cover transition-transform duration-700 group-hover:scale-105",
-                  "aspect-[4/3]",
-                )}
-              />
-              <div className="absolute inset-0 bg-fade opacity-90" />
-              <figcaption className="absolute inset-x-5 bottom-5 flex items-end justify-between gap-3">
-                <div>
-                  <span className="text-xs font-semibold uppercase tracking-widest text-primary">
-                    {p.category}
-                  </span>
-                  <p className="mt-1 font-display text-xl font-semibold">{p.title}</p>
-                </div>
-              </figcaption>
-            </figure>
+            <Tilt key={p.title} className="reveal-3d mb-4 break-inside-avoid" max={7}>
+              <figure className="group relative overflow-hidden rounded-3xl shadow-soft">
+                <img
+                  src={p.image}
+                  alt={p.title}
+                  loading="lazy"
+                  className={cn(
+                    "w-full object-cover transition-transform duration-700 group-hover:scale-105",
+                    "aspect-[4/3]",
+                  )}
+                />
+                <div className="absolute inset-0 bg-fade opacity-90" />
+                <figcaption className="absolute inset-x-5 bottom-5 flex items-end justify-between gap-3">
+                  <div>
+                    <span className="text-xs font-semibold uppercase tracking-widest text-brand">
+                      {p.category}
+                    </span>
+                    <p className="mt-1 font-display text-xl font-semibold">{p.title}</p>
+                  </div>
+                </figcaption>
+              </figure>
+            </Tilt>
           ))}
         </div>
       </section>

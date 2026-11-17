@@ -28,7 +28,7 @@ export function Header() {
     >
       <div className="mx-auto flex h-18 max-w-7xl items-center justify-between gap-6 px-5 py-4 md:px-8">
         <Link to="/" aria-label="Daoud Creative — accueil" onClick={() => setOpen(false)}>
-          <Logo className="text-xl md:text-2xl" />
+          <Logo className="h-8 md:h-9" />
         </Link>
 
         <nav className="hidden items-center gap-1 rounded-full border border-border bg-surface/60 p-1 backdrop-blur lg:flex">
@@ -74,7 +74,7 @@ export function Header() {
                 onClick={() => setOpen(false)}
                 activeOptions={{ exact: item.to === "/" }}
                 className="border-b border-border py-4 font-display text-2xl font-semibold text-foreground/80"
-                activeProps={{ className: "!text-primary" }}
+                activeProps={{ className: "!text-brand" }}
               >
                 {item.label}
               </Link>

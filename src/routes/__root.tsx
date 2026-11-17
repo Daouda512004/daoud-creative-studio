@@ -91,7 +91,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Design graphique, sites web, photographie, vidéo et communication digitale à Dakar.",
       },
       { name: "author", content: "Daoud Creative" },
-      { name: "theme-color", content: "#14151a" },
+      { name: "theme-color", content: "#f8f6f1" },
       { property: "og:site_name", content: "Daoud Creative" },
       { property: "og:locale", content: "fr_SN" },
       { property: "og:type", content: "website" },

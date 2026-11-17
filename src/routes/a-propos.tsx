@@ -5,6 +5,7 @@ import { CtaBand } from "@/components/site/CtaBand";
 import { Highlight } from "@/components/site/Highlight";
 import { Logo } from "@/components/site/Logo";
 import { PageHero } from "@/components/site/PageHero";
+import { Tilt } from "@/components/site/Tilt";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import reunionHero from "@/assets/reunion-client.jpg";
 import { values } from "@/lib/site-data";
@@ -86,13 +87,13 @@ function AboutPage() {
               className="aspect-square w-full rounded-3xl object-cover"
             />
             <div className="glass grid flex-1 place-items-center rounded-3xl p-5">
-              <Logo tagline className="text-xl" />
+              <Logo tagline className="h-auto w-full max-w-[15rem]" />
             </div>
           </div>
         </div>
         <div className="space-y-4">
           {pillars.map(({ Icon, title, text }) => (
-            <div key={title} className="glass flex gap-5 rounded-3xl p-6">
+            <div key={title} className="glass reveal-3d flex gap-5 rounded-3xl p-6">
               <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-primary text-primary-foreground">
                 <Icon className="h-5 w-5" />
               </span>
@@ -113,12 +114,16 @@ function AboutPage() {
         />
         <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {values.map((v, i) => (
-            <div key={v.title} className="glass rounded-3xl p-6">
-              <span className="font-display text-5xl font-bold text-primary/25">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <h3 className="mt-6 font-display text-xl font-semibold">{v.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{v.text}</p>
+            <div key={v.title} className="reveal-3d">
+              <Tilt className="h-full">
+                <div className="glass preserve-3d h-full rounded-3xl p-6">
+                  <span className="pop-z block font-display text-5xl font-bold text-brand/40">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <h3 className="mt-6 font-display text-xl font-semibold">{v.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{v.text}</p>
+                </div>
+              </Tilt>
             </div>
           ))}
         </div>

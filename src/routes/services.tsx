@@ -52,7 +52,7 @@ function ServicesPage() {
           <article
             id={s.slug}
             key={s.slug}
-            className="glass grid scroll-mt-28 items-center gap-8 overflow-hidden rounded-[2rem] p-4 md:grid-cols-2 md:p-6"
+            className="glass reveal-3d grid scroll-mt-28 items-center gap-8 overflow-hidden rounded-[2rem] p-4 md:grid-cols-2 md:p-6"
           >
             <div className={cn("overflow-hidden rounded-3xl", i % 2 === 1 && "md:order-2")}>
               <img
@@ -76,7 +76,7 @@ function ServicesPage() {
               <ul className="mt-6 space-y-3">
                 {s.points.map((p) => (
                   <li key={p} className="flex items-center gap-3 text-sm">
-                    <span className="grid h-5 w-5 place-items-center rounded-full bg-primary/15 text-primary">
+                    <span className="grid h-5 w-5 place-items-center rounded-full bg-primary/15 text-brand">
                       <Check className="h-3 w-3" />
                     </span>
                     {p}

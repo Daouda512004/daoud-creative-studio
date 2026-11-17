@@ -12,11 +12,11 @@ import reunion from "@/assets/reunion-client.jpg";
 
 export const contact = {
   email: "daoudcreative@gmail.com",
-  phone: "78 663 03 92",
-  phoneIntl: "221786630392",
+  phone: "77 186 29 86",
+  phoneIntl: "221771862986",
   handle: "@daoud.creative",
   city: "Dakar, Sénégal",
-  whatsapp: "https://wa.me/221786630392",
+  whatsapp: "https://wa.me/221771862986",
   instagram: "https://instagram.com/daoud.creative",
   facebook: "https://www.facebook.com/share/1CH7hCxDyc/?mibextid=wwXIfr",
   youtube: "https://youtube.com/@daoud.creative",

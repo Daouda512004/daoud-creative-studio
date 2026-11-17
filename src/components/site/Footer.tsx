@@ -10,7 +10,7 @@ export function Footer() {
       <div aria-hidden="true" className="absolute inset-0 bg-grid opacity-60" />
       <div className="relative mx-auto grid max-w-7xl gap-12 px-5 py-16 md:grid-cols-12 md:px-8">
         <div className="md:col-span-4">
-          <Logo tagline className="text-3xl" />
+          <Logo tagline className="h-14 md:h-16" />
           <p className="mt-6 max-w-sm text-sm leading-relaxed text-muted-foreground">
             Studio créatif & digital basé à Dakar. Nous transformons vos idées en créations
             visuelles et en solutions numériques modernes.
@@ -27,7 +27,7 @@ export function Footer() {
               <li key={n.to}>
                 <Link
                   to={n.to}
-                  className="text-muted-foreground transition-colors hover:text-primary"
+                  className="text-muted-foreground transition-colors hover:text-brand"
                 >
                   {n.label}
                 </Link>
@@ -46,7 +46,7 @@ export function Footer() {
                 <Link
                   to="/services"
                   hash={s.slug}
-                  className="text-muted-foreground transition-colors hover:text-primary"
+                  className="text-muted-foreground transition-colors hover:text-brand"
                 >
                   {s.title}
                 </Link>
@@ -61,22 +61,22 @@ export function Footer() {
           </h3>
           <ul className="mt-5 space-y-4 text-sm">
             <li className="flex items-center gap-3 text-muted-foreground">
-              <MapPin className="h-4 w-4 text-primary" /> {contact.city}
+              <MapPin className="h-4 w-4 text-brand" /> {contact.city}
             </li>
             <li>
               <a
                 href={`mailto:${contact.email}`}
-                className="flex items-center gap-3 text-muted-foreground hover:text-primary"
+                className="flex items-center gap-3 text-muted-foreground hover:text-brand"
               >
-                <Mail className="h-4 w-4 text-primary" /> {contact.email}
+                <Mail className="h-4 w-4 text-brand" /> {contact.email}
               </a>
             </li>
             <li>
               <a
                 href={`tel:+${contact.phoneIntl}`}
-                className="flex items-center gap-3 text-muted-foreground hover:text-primary"
+                className="flex items-center gap-3 text-muted-foreground hover:text-brand"
               >
-                <Phone className="h-4 w-4 text-primary" /> {contact.phone}
+                <Phone className="h-4 w-4 text-brand" /> {contact.phone}
               </a>
             </li>
           </ul>
